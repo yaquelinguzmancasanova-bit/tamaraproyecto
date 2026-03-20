@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>VIDEOS DE ROCK</title>
+
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, Verdana;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Botón volver */
+        .volver {
+            position: fixed;
+            top: 22px;
+            left: 22px;
+            text-decoration: none;
+            color: white;
+            background: #ff334e;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            z-index: 1000; /* Para que siempre esté encima */
+        }
+
+        .volver:hover {
+            background: #ff3333;
+            transform: scale(1.05); /* Un pequeño efecto al pasar el mouse */
+        }
+
+        h1 {
+            color: #00d4ff;
+            margin-top: 40px;
+            font-size: 2.5rem;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px auto;
+            max-width: 800px; 
+        }
+
+        .video {
+            background: #826924;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px #000;
+            width: 320px;
+            transition: 0.3s; /* Para que el efecto hover sea suave */
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+    </style>
+</head> <body>
+
+    <a href="index.html" class="volver">← Volver</a>
+
+    <h1>🎬 VIDEOS DE ROCK</h1>
+
+    <div class="contenedor">
+
+        <div class="video">
+            <h3>BOHEMIAN RHAPSODY</h3>
+            <video controls>
+                <source src="videoqueen.mp4" type="video/mp4">
+            </video>
+        </div>
+</body>
+</html>
