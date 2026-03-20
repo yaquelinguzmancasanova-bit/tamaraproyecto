@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LO MEJOR DE LOS 90'S</title>
+  <style>
+    /* Reset y Box-sizing */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("fondo.jpeg"); 
+      background-size: cover; 
+      background-position: center;   
+      color: white; 
+      text-align: center;
+      padding: 80px 20px; /* Padding más equilibrado */
+    }
+
+    /* ===== MENÚ ===== */
+    nav {
+      background-color: black;
+      position: sticky; /* Se queda arriba al bajar */
+      top: 0;
+      z-index: 1000;
+    }
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+
+    nav a {
+      color: pink;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: inline-block;
+    }
+
+    nav a:hover, .dropdown:hover > a {
+      background-color: gold;
+      color: red;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333; /* Gris más oscuro para contraste */
+      min-width: 180px;
+      z-index: 1001;
+    }
+
+    .dropdown-content a {
+      display: block;
+      color: white;
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* ===== CONTENIDO ===== */
+    .contenedor {
+      display: flex;
+      padding: 20px;
+      flex-grow: 1;
+      max-width: 1200px;
+      margin: 0 auto; /* Centra el contenido en pantallas grandes */
+    }
+
+    main {
+      width: 70%;
+      padding-right: 20px;
+    }
+
+    .musica {
+      background-color: lightblue;
+      color: #333; /* Texto oscuro sobre fondo claro es más legible */
+      padding: 30px;
+      border-radius: 8px;
+      margin: 30px 0;
+      text-align: center;
+    }
+    
+    .musica button {
+      background-color: red;
+      border: none;
+      padding: 15px 30px;
+      color: white;
+      font-size: 1rem;
+      border-radius: 50px; /* Estilo rockero más moderno */
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+      font-weight: bold;
+    }
+    
+    .musica button:hover {
+      background-color: green;
+      transform: scale(1.05);
+    }
+
+    aside {
+      width: 30%;
+      text-align: center;
+      border-left: 1px solid #ddd;
+    }
+
+    aside img {
+      width: 80%;
+      max-width: 200px;
+      aspect-ratio: 1/1; /* Mantiene el círculo perfecto */
+      border-radius: 50%;
+      display: block;
+      margin: 30px auto;
+      object-fit: cover;
+      border: 5px solid black;
+    }
+
+    footer {
+      background-color: red;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: auto;
+    }
+
+    /* ===== MEDIA QUERIES (PARA CELULAR) ===== */
+    @media (max-width: 768px) {
+      nav { text-align: center; }
+      .dropdown { display: block; width: 100%; }
+      nav a { display: block; width: 100%; border-bottom: 1px solid #222; }
+      .dropdown-content { position: static; width: 100%; }
+      
+      .contenedor { flex-direction: column; }
+      main, aside { width: 100%; padding: 0; border: none; }
+      aside img { display: inline-block; margin: 15px; width: 40%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+    <h1>⚡ LO MEJOR DE LOS 90'S ⚡</h1>
+    <p>"No puedes comenzar un fuego sin una chispa" - Bruce Springsteen</p>
+</header>
+
+<nav>
+    <div class="dropdown">
+        <a href="#">CANTANTES</a>
+        <div class="dropdown-content">
+            <a href="kurt.html">Kurt Cobain</a>
+            <a href="freddie.html">Freddie Mercury</a>
+            <a href="lennon.html">John Lennon</a>
+            <a href="Axl.html">Axl Rose</a>
+
+        </div>
+    </div>
+    <a href="gale.html">GALERÍA</a>
+    <a href="formulario.html">FORMULARIO</a>
+    <a href="video.html">VIDEO</a>
+    <a href="redes.html">REDES SOCIALES</a>
+</nav>
+
+<div class="contenedor">
+    <main>
+        <br>
+        <h1>BIENVENIDO NUEVO ROCKERO</h1>
+        <br>
+        <p>EL ROCK ES UN GÉNERO DE MÚSICA POPULAR SURGIDO EN EE.UU. EN LA DÉCADA DE 1950. DERIVADO DEL ROCK AND ROLL Y LA FUSIÓN DE RHYTHM AND BLUES Y COUNTRY.</p>
+        <br>
+        <p>EVOLUCIONÓ HACIA DIVERSOS ESTILOS, INCLUYENDO ROCK CLÁSICO, HARD ROCK, PUNK Y ALTERNATIVO, CON ICONOS COMO QUEEN Y NIRVANA.</p>
+        <br><hr><br>
+        
+        <div class="musica">
+          <p>ESCUCHA NUESTRA MÚSICA MIENTRAS NAVEGAS:</p>
+          <br>
+          <button id="playBtn">▶ Reproducir música</button>
+          <audio id="audio" src="Forever Young - Alphaville  Letra en españolinglés..mp3"></audio>
+        </div>
+    </main>
+
+    <aside>
+        <img src="foto 1.jpeg" alt="Rock 1">
+        <img src="foto 2.jpeg" alt="Rock 2">
+        <img src="foto 3.jpeg" alt="Rock 3">
+    </aside>
+</div>
+
+<footer>
+    <p>Tamara Hernandez</p>
+</footer>
+
+<script>
+  const playBtn = document.getElementById('playBtn');
+  const audio = document.getElementById('audio');
+
+  playBtn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play().catch(e => console.error("Error al reproducir: ", e));
+      playBtn.textContent = "⏸️ Pausar música";
+    } else {
+      audio.pause();
+      playBtn.textContent = "▶️ Reproducir música";
+    }
+  });
+</script>
+
+</body>
+</html>

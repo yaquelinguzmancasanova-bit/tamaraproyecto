@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conozcamoste mas</title>
+    <style>
+        /* --- Estilos Generales --- */
+        body {
+            font-family: Times new roman, Arial;
+             background: linear-gradient(to right,#eded5a, #ed845a );
+            margin: 0;
+            padding: 0;
+            background-color: #853939;
+        }
+    
+    /* Botón volver */
+    .volver {
+      position: fixed;
+      top: 22px;
+      left: 22px;
+      text-decoration: none;
+      color: white;
+      background: #ff334e;
+      padding: 10px 10px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .volver:hover {
+      background: #ff3333;
+    }
+
+
+
+    header {
+      background-image: url("concierto.jpeg"); 
+      background-size: cover; 
+      background-position: center;   
+      color: white; 
+      text-align: center;
+      padding: 120px 120px; 
+    }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para que se lea mejor el texto */
+        }
+
+        /* --- Estilos del Contenedor Principal --- */
+        .container {
+            max-width: 600px; /* Ancho máximo del formulario */
+            margin: -50px auto 50px; /* Levanta el formulario sobre el encabezado */
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative; /* Necesario para el margin-top negativo */
+        }
+
+        h2 {
+            text-align: center;
+            color:blue ; /* Color institucional (ejemplo) */
+            margin-bottom: 30px;
+        }
+
+        /* --- Estilos del Formulario --- */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: black;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Importante para que el padding no afecte el ancho */
+            font-size: 16px;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color:#8fdbb5 ;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 74, 153, 0.2);
+        }
+
+        /* Tres renglones para sugerencias */
+        textarea {
+            resize: vertical; /* Permite al usuario estirarlo solo hacia abajo */
+        }
+
+        /* Estilos del Botón --- */
+        .btn-enviar {
+            background-color:#872929; /* Color institucional */
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-enviar:hover {
+            background-color: PINK; /* Color más oscuro al pasar el mouse */
+        }
+
+    </style>
+</head>
+
+<body>
+
+  <!-- Botón volver -->
+  <div class="volver">
+  <a href="index.html" TARGET="_BLANK">VOLVER</a>
+ </div>
+  <div class="contenedor">
+
+    <header>
+        <h1>Conozcamos mas de ti</h1>
+    </header>
+
+    <div class="container">
+        <h2>FORMULARIO ROCKERO</h2>
+        
+        <form action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
+            
+            <div class="form-group">
+                <label for="Nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+            <div class="form-group">
+                <label for="Banda">Banda:</label>
+                <input type="text" id="banda" name="banda">
+            </div>
+            <div class="form-group">
+                <label for="Genero">Genero:</label>
+                <input type="text" id="genero" name="genero">
+            </div>
+            <div class="form-group">
+                <label for="Cantante">Cantante:</label>
+                <input type="text" id="cantante" name="cantante">
+            </div>
+            <div class="form-group">
+                <label for="musica">Musica:</label>
+                <input type="text" id="musica" name="musica">
+            </div>
+
+
+            <button type="submit" class="btn-enviar">ENVIAR DATOS</button>
+
+        </form>
+    </div>
+</body>
+</html>
